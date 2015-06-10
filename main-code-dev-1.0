@@ -1,0 +1,46 @@
+#This is the code in the first developer version coded with Script Editor.
+#If you don't know how to use AppleScript, here's a good guide: https://developer.apple.com/library/mac/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html
+
+set angrLvl to 0
+display dialog "This game was developed by peterjhc. You can find his Scratch page at scratch.mit.edu/users/peterjhc. This game was inspired by the iOS app Lifeline, and the Disney movie Tommorowland. He does not pretend to have had any talk with these two developers, and he has broken no laws in making this game. Once you continue, it is very difficult to close. Good luck!" with icon alias "Users:Peter:Documents:mricnsICON.png" buttons {"Begin"} default button "Begin"
+display dialog "A message has been sent. Would you like to receive it?" with title "Message Assistant" buttons {"Receive", "Deny"} default button "Receive"
+if button returned of result is "Receive" then
+	display dialog "Hello? Can anyone receive this?" buttons {"I've received it."}
+	display dialog "Great! Who is this?" default answer "" buttons {"Submit"}
+	set namevr to text returned of result
+	display dialog "Hello, there, " & namevr & "! This message has not been sent yet!" buttons {"Wait, whaat?", "Cool!"}
+	display dialog "*laughing* I know. Weird, isn't it? Just let me explain." buttons {"Okay, cool!", "First, introduce yourself."}
+	if button returned of result is "Okay, cool!" then
+		display dialog "I am John Protsiou. I am on an experiment to travel to the future." buttons {"The future?", "Time travel?"}
+	else if button returned of result is "First, introduce yourself." then
+		display dialog "Fair, that's fair. Okay. I am John Protsiou, scientist on a time-travel experiment." buttons {"Be serious.", "Okay, then!"}
+	end if
+	display dialog "I promise that I am 100% serious. I wouldn't be sending this for any other reason. I need some advice, you see." buttons {"From me?", "What do you need?"}
+	if button returned of result is "From me?" then
+		display dialog "Yes, from you. Anyone, really. I'm lucky anyone picked up this signal! So, really, thanks, " & namevr & "." buttons {"No problem."}
+	else if button returned of result is "What do you need?" then
+		display dialog "All in due time." buttons {"Okay.", "Gah!"}
+	end if
+	display dialog "You see, " & namevr & ", I am in the future, so this signal is being sent back in time. Which was against the rules of time travel. In other words, if I don't get help soon, the entire universe as we know it will collapse and we might all die soon. So, want to help me?" buttons {"You've got to be kidding me.", "Seriously?"}
+	display dialog "As I said earlier, I am totally serious. I need your help to stabilize this machine, or we're gonna die. Kapeesh?" buttons {"I'll give you the benefit of the doubt.", "Got it."}
+	if button returned of result is "I'll give you the benefit of the doubt." then
+		display dialog "I think you should trust me more. If we don't trust each other, we might die. I though I went over that." buttons {"Fine."}
+		set angrLvl to 1
+	else if button returned of result is "Got it." then
+		display dialog "Good. Let's continue, shall we?" buttons {"Yes!"}
+	end if
+	display dialog "Okay. First piece of advice: There's this generator. It has two outlets. One is powering the light, and the other is powering this radio transmitter/receiver. The radio transmitter has battery power, but it won't last long. I need to unplug one of them so that I can plug in the Object Transmitter, which lets me go home if I prepare it exactly as this manual shows-  *pages turning* -Ah! Here it is- [static blocks signal] -or the nuclear power will take over, which means I have to wear a hazmat suit and I might get radiation sickness. So! What should I unplug?" buttons {"What were you saying about the nuclear power?", "The radio!", "The light!"}
+	if button returned of result is "What were you saying about the nuclear power?" then
+		display dialog "Oh. That's what happens if I press sequence Ω≈∂µ∫æ≠÷ on the Glaripious Transcraptiocoptias. Sorry."
+	else if button returned of result is "The radio!" then
+		display dialog "Okay. This radio can only take a few more signals, so I'd better make them count."
+		#Hmm... seperate storyline stems fr/ here?
+	else if button returned of result is "The light!" then
+		display dialog "Okay. *crackling* [voice transmitter activated] GAAAAH!! Got - zapped! Shock - sending- Might close - signal -" buttons {"What's happening?"}
+		display dialog "Lost connection. Please wait a few moments." with title "Message Assistant" buttons {"Continue"}
+		delay 3
+		display dialog "Okay. I'm back. I got zapped by the light socket. Sorry 'bout that." buttons {"No problem."}
+	end if
+else if button returned of result is "Deny" then
+	
+end if
