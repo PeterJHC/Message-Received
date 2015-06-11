@@ -1,3 +1,3 @@
 # Message-Received
-An app I'm making in AppleScript
-This can only be used by Mac users, because AppleScript is Mac-only.
+--This is where final version scripts are posted.
+--Developer (alpha & beta versions) can be --found in the dev-versions branch.
